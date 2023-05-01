@@ -18,16 +18,19 @@ This scraper is under active development. If you have any feature requests you c
 
 ## Input Parameters
 
-The input of this scraper should be JSON containing the list of pages on XXXXX that should be visited. Required fields are:
+The input of this scraper should be JSON containing the list of pages on NPM that should be visited. Possible fields are:
 
-| Field                | Type    | Description                                                                                                                                                                                                    |
-| -------------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| search               | String  | (optional) Keyword that you want to search on npmjs.com.                                                                                                                                                       |
-| startUrls            | Array   | (optional) List of URLs in NPM. You should only provide search, list, user detail or package detail URLs                                                                                                                 |
-| endPage              | Integer | (optional) Final number of page that you want to scrape. Default is `Infinite`. This is applies to all `search` request and `startUrls` individually.                                                          |
-| maxItems             | Integer | (optional) You can limit scraped items. This should be useful when you search through the big lists or search results.                                                                                                |
-| proxy                | Object  | Proxy configuration                                                                                                                                                                                            |
-| customMapFunction | String  | (optional) Function that takes each objects handle as argument and returns object with executing the function                                                                                                                     |
+- `search`: (Optional) (String) Keyword that you want to search on npmjs.
+
+- `startUrls`: (Optional) (Array) List of URLs in NPM. You should only provide search, list, user detail or package detail URLs.
+
+- `endPage`: (Optional) (Number) Final number of page that you want to scrape. Default is `Infinite`. This is applies to all `search` request and `startUrls` individually.
+
+- `maxItems`: (Optional) (Number) You can limit scraped items. This should be useful when you search through the big lists or search results.
+
+- `proxy`: (Required) (Proxy Object) Proxy configuration.
+
+- `customMapFunction`: (Optional) (String) Function that takes each objects handle as argument and returns object with executing the function.
 
 This solution requires the use of **Proxy servers**, either your own proxy servers or you can use [Apify Proxy](https://www.apify.com/docs/proxy).
 
@@ -74,7 +77,7 @@ If you provide incorrect input to the actor, it will immediately stop with failu
 
 During the run, the actor stores results into a dataset. Each item is a separate item in the dataset.
 
-You can manage the results in any languague (Python, PHP, Node JS/NPM). See the FAQ or <a href="https://www.apify.com/docs/api" target="blank">our API reference</a> to learn more about getting results from this XXXXX actor.
+You can manage the results in any languague (Python, PHP, Node JS/NPM). See the FAQ or <a href="https://www.apify.com/docs/api" target="blank">our API reference</a> to learn more about getting results from this NPM actor.
 
 ## Scraped NPM Properties
 
